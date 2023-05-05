@@ -1,30 +1,27 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
 
-public class DebugExemplo {
+public class ExercicioDebug {
     public static double calcularAreaRetanguloComInputUsuario() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite a base: ");
-        double base = readln().toDouble();
-        System.out.println("Digite a altura: ");
-        double altura = readln().toDouble();
+         System.out.print("Digite a base: ");
+        double base = scanner.nextDouble();
+
+        System.out.print("Digite a altura: ");
+        double altura = scanner.nextDouble();{
 
         double areaRetangulo = base * altura;
-        System.out.println("O valor da área é de $areaRetangulo");
+        System.out.println("O valor da área é de: " + areaRetangulo);
+        return areaRetangulo;}
 
-        return areaRetangulo;
+
     }
-
-    public static calcularAreaRetangulo(double base, double altura) {
-        double areaRetangulo = base * altura;
-        System.out.println("O valor da área do retangulo é $areaRetangulo");
-    }
-
-    public static void calcularSomaAreas() {
+    public static double calcularSomaAreas() {
         //Exemplo de uso do retorno de outra função
         double somaAreas = calcularAreaRetanguloComInputUsuario() + calcularAreaRetanguloComInputUsuario();
-        System.out.println("A area total de construção é de: $somaAreas");
+        System.out.println("A area total de construção é de: "+somaAreas);
+        return somaAreas;
     }
 
     public static void mostrarTodosOsValoresListaNumero(List<Integer> numeros) {
@@ -35,7 +32,9 @@ public class DebugExemplo {
 
     public static List<Integer> retornarListaNumeros() {
         Integer[] listaNumero = new Integer[3];
-        return listaNumero;
+        for (int i = 0; i < 3 ; i++) {
+        }
+        return null;
     }
 
     public static List<String> mostrarMensagemComQuantidade(List<Integer> quantidade) {
@@ -48,15 +47,15 @@ public class DebugExemplo {
 
     public static List<String> retornarListaNomes() {
         System.out.println("Digite a capacidade: ");
-        int capacidade = scanner.nextInt();
+        Scanner ler = new Scanner(System.in);
+        int capacidade = ler.nextInt();
 
         List<String> listaNomes = new ArrayList<>();
 
         for (int i = 0; i < listaNomes.size(); i++) {
             System.out.println("Digite um nome: ");
-            listaNomes.add(scanner.nextLine());
+            listaNomes.add(ler.nextLine());
         }
-
         return listaNomes;
     }
 
